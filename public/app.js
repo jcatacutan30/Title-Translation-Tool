@@ -17,6 +17,13 @@ function restoreSession() {
 
   try {
     const session = JSON.parse(raw);
+    // Only prompt if there's meaningful data to restore
+    if (!session.pastedData && !session.lastBatchResults) return;
+
+    if (!confirm('Restore previous session?')) {
+      localStorage.removeItem('translatorSession');
+      return;
+    }
 
     // Restore active tab
     if (session.activeTab) {
