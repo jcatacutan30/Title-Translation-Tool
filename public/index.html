@@ -29,7 +29,6 @@
     <div class="tabs">
       <button class="tab active" data-tab="batch">Batch Process</button>
       <button class="tab" data-tab="single">Single Title</button>
-      <button class="tab" data-tab="settings">Settings</button>
     </div>
 
     <!-- Batch Processing Tab -->
@@ -140,22 +139,36 @@
       </div>
     </section>
 
-    <!-- Settings Tab -->
-    <section id="settings-tab" class="tab-content">
-      <div class="settings-section">
-        <h2>Appearance</h2>
-        <div class="setting-item">
-          <div class="setting-label">
-            <span class="setting-name">Theme</span>
-            <span class="setting-description">Choose between light and dark mode</span>
-          </div>
-          <div class="theme-toggle">
-            <button class="theme-btn active" data-theme="light">Light</button>
-            <button class="theme-btn" data-theme="dark">Dark</button>
-          </div>
-        </div>
+  </div>
+
+  <!-- Settings Gear (fixed top-right) -->
+  <button class="settings-gear" id="settingsGearBtn" title="Settings">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="3"></circle>
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33
+        1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06
+        a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09
+        A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0
+        9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33
+        l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0
+        4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+    </svg>
+  </button>
+
+  <!-- Settings Dropdown Panel -->
+  <div class="settings-panel hidden" id="settingsPanel">
+    <h3>Settings</h3>
+    <div class="setting-item">
+      <div class="setting-label">
+        <span class="setting-name">Theme</span>
+        <span class="setting-description">Choose between light and dark mode</span>
       </div>
-    </section>
+      <div class="theme-toggle">
+        <button class="theme-btn active" data-theme="light">Light</button>
+        <button class="theme-btn" data-theme="dark">Dark</button>
+      </div>
+    </div>
   </div>
 
   <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>

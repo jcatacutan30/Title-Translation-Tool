@@ -28,6 +28,24 @@ document.querySelectorAll('.theme-btn').forEach(btn => {
 });
 
 // ============================================
+// SETTINGS GEAR TOGGLE
+// ============================================
+const settingsGearBtn = document.getElementById('settingsGearBtn');
+const settingsPanel = document.getElementById('settingsPanel');
+
+settingsGearBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  settingsPanel.classList.toggle('hidden');
+});
+
+// Close panel when clicking outside
+document.addEventListener('click', (e) => {
+  if (!settingsPanel.contains(e.target) && e.target !== settingsGearBtn) {
+    settingsPanel.classList.add('hidden');
+  }
+});
+
+// ============================================
 // SESSION PERSISTENCE
 // ============================================
 function saveSession() {
