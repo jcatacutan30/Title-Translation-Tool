@@ -29,6 +29,7 @@
     <div class="tabs">
       <button class="tab active" data-tab="batch">Batch Process</button>
       <button class="tab" data-tab="single">Single Title</button>
+      <button class="tab" data-tab="settings">Settings</button>
     </div>
 
     <!-- Batch Processing Tab -->
@@ -136,6 +137,23 @@
         <h2>Translations</h2>
         <div id="translationGrid"></div>
         <p id="sheetStatus"></p>
+      </div>
+    </section>
+
+    <!-- Settings Tab -->
+    <section id="settings-tab" class="tab-content">
+      <div class="settings-section">
+        <h2>Appearance</h2>
+        <div class="setting-item">
+          <div class="setting-label">
+            <span class="setting-name">Theme</span>
+            <span class="setting-description">Choose between light and dark mode</span>
+          </div>
+          <div class="theme-toggle">
+            <button class="theme-btn active" data-theme="light">Light</button>
+            <button class="theme-btn" data-theme="dark">Dark</button>
+          </div>
+        </div>
       </div>
     </section>
   </div>
